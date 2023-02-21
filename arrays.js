@@ -46,3 +46,26 @@ for (let i = 0; i < marks.length; i++) {
 }
 
 //reduce filter map
+let total = marks.reduce((sum, mark) => sum + mark, 0)
+console.log(total)
+
+//create new array
+var scores = [12, 13, 14, 16]
+//create a new array with even numbers of scores array [12, 14, 16]
+// this is one way if doing
+var evenScores = []
+for (let i = 0; i < scores.length; i++) {
+    if (scores[i] %2 == 0) {
+        evenScores.push(scores[i])
+    }
+}
+console.log(evenScores)
+
+console.log("**********")
+// another way - simple
+let newFilterEvenScores = scores.filter(score=>score%2==0)
+console.log(newFilterEvenScores)
+
+//map array function 
+/* create a new array with even numbers of scores 
+and multiply each value with array [12, 14, 16] */
