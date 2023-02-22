@@ -55,17 +55,31 @@ var scores = [12, 13, 14, 16]
 // this is one way if doing
 var evenScores = []
 for (let i = 0; i < scores.length; i++) {
-    if (scores[i] %2 == 0) {
+    if (scores[i] % 2 == 0) {
         evenScores.push(scores[i])
     }
 }
 console.log(evenScores)
 
-console.log("**********")
 // another way - simple
-let newFilterEvenScores = scores.filter(score=>score%2==0)
-console.log(newFilterEvenScores)
+let newFilterEvenScores = scores.filter(score => score % 2 == 0)
+console.log(newFilterEvenScores) //[12, 14, 16]
 
 //map array function 
 /* create a new array with even numbers of scores 
-and multiply each value with array [12, 14, 16] */
+and multiply each value with 3: [12, 14, 16] => [36,52,48] */
+let mappedArray = newFilterEvenScores.map(score => score * 3)
+console.log(mappedArray) //[ 36, 42, 48 ]
+
+//reduce
+/* create a new array with even numbers of scores 
+and multiply each value with 3 and 
+sum them: [12, 14, 16] => [36,52,48] => 126 */
+let totalVal = mappedArray.reduce((sum, val) => sum + val, 0)
+console.log(totalVal) //126
+
+console.log("**********")
+//create new array
+var scores1 = [12, 13, 14, 16]
+let sumValue = scores1.filter(score => score % 2 == 0).map(score => score * 3).reduce((sum, val) => sum + val, 0)
+console.log(sumValue) 
