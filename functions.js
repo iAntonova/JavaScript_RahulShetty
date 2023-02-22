@@ -36,7 +36,6 @@ console.log(sum1) //5
 console.log(greet1)
 
 //const - can't be reinitialized
-console.log("**********")
 const greet2 = "Evening2" //Evening2
 //greet2 = "Night2" //error
 
