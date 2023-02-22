@@ -39,7 +39,6 @@ console.log(val) //4
 let val2 = newQuote.indexOf("day", 5)
 console.log(val2) //14
 
-console.log("**********")
 /* count how many times "day" in sentence */
 let count = 0
 let value = newQuote.indexOf("day")
