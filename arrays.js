@@ -78,8 +78,25 @@ sum them: [12, 14, 16] => [36,52,48] => 126 */
 let totalVal = mappedArray.reduce((sum, val) => sum + val, 0)
 console.log(totalVal) //126
 
-console.log("**********")
 //create new array
 var scores1 = [12, 13, 14, 16]
 let sumValue = scores1.filter(score => score % 2 == 0).map(score => score * 3).reduce((sum, val) => sum + val, 0)
-console.log(sumValue) 
+console.log(sumValue)
+
+//sorting in array 
+/* 1st type w/strings
+   2nd type /numbers */
+console.log("**********")
+let fruits = ["banana", "mango", "pomegrante", "apple"]
+console.log(fruits.sort()) //[ 'apple', 'banana', 'mango', 'pomegrante' ]
+console.log(fruits.reverse()) //[ 'pomegrante', 'mango', 'banana', 'apple' ]
+
+var scores2 = [12, 13, 003, 19, 14, 16]
+console.log(scores2.sort()) //[ 12, 13, 14, 16, 19, 3 ]
+/* this one 
+scores2.sort(function (a, b) {
+    return a - b
+})
+same but short */
+console.log(scores2.sort((a, b)=> a - b)) //[ 3, 12, 13, 14, 16, 19 ]
+console.log(scores2.sort((a, b)=> b - a)) //[ 19, 16, 14, 13, 12, 3 ]
