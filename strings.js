@@ -1,3 +1,4 @@
+const Person = require('./classesPropertiesMethods')
 let day = 'tuesday '
 console.log(day.length) //8
 
@@ -47,3 +48,6 @@ while (value !== -1) {
     value = newQuote.indexOf("day", value + 1)
 }
 console.log(count)
+
+let person = new Person("Michal", "Jackson")
+console.log(person.fullName()) //Michal Jackson
