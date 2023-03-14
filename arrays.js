@@ -100,3 +100,4 @@ scores2.sort(function (a, b) {
 same but short */
 console.log(scores2.sort((a, b)=> a - b)) //[ 3, 12, 13, 14, 16, 19 ]
 console.log(scores2.sort((a, b)=> b - a)) //[ 19, 16, 14, 13, 12, 3 ]
+
